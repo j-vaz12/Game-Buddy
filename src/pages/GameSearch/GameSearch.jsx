@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import './GameSearch.css'
 import * as gamesAPI from '../../utilities/game-api'
-export default function GameSearch() {
+import SearchDetail from "../../components/SearchDetail/SearchDetail";
+
+export default function GameSearch( {GamesPage} ) {
     const [search, setSearch] = useState('')
     const [games, setGames] = useState([])
     // useEffect( function (){
@@ -22,6 +24,7 @@ export default function GameSearch() {
         setGames(data.results);
     }
 
+    const searchDetails = games.map( g => <SearchDetail key={g.id} g={g} />)
 
     return (
         <div className="Search">
@@ -31,7 +34,7 @@ export default function GameSearch() {
                 <button>Find</button>
             </form>
             <div>
-            {games.map(g => <h3 key={g.id}> {g.name}</h3> )}    
+             {searchDetails}
              </div>
         </div>
     );
