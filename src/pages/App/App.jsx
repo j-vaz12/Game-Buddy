@@ -5,6 +5,7 @@ import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import WelcomePage from '../WelcomePage/WelcomePage';
+import GameSearch from '../GameSearch/GameSearch';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -15,7 +16,7 @@ export default function App() {
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
-              {/* Route components in here */}
+              <Route path="/Search" element={<GameSearch />} />
             </Routes>
           </>
           :

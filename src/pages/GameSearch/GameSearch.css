@@ -1,0 +1,8 @@
+.Search {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.2rem solid black;
+}
