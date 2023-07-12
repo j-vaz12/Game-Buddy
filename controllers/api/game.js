@@ -29,7 +29,7 @@ async function addGameToUser(req, res) {
             }
             gameInDb = await Game.create(newGame)
         } 
-        res.status(200).json("yay")
+        res.status(200).json("Lets go!")
     } catch (err) {
         res.status(400).json(err);
     }

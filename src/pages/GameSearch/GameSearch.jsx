@@ -24,16 +24,16 @@ export default function GameSearch( {GamesPage} ) {
         setGames(data.results);
     }
 
-    const searchDetails = games.map( g => <SearchDetail key={g.id} g={g} />)
+    const searchDetails = games.map( g => <SearchDetail className="game-container" key={g.id} g={g} />)
 
     return (
-        <div className="Search">
+        <div>
             <form onSubmit={handleSearch}>
                 <label> Search </label>
                 <input type="text" value={search} onChange={handelChange}/>
                 <button>Find</button>
             </form>
-            <div>
+            <div className="Search">
              {searchDetails}
              </div>
         </div>
