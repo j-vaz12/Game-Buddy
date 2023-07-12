@@ -1,5 +1,5 @@
 const Game = require('../../models/game');
-const UserGame = require('../../models/userGame');
+const UserGame = require('../../models/userGame')
 const fetch = require('node-fetch');
 
 module.exports = {
@@ -21,7 +21,6 @@ async function searchAPI(req, res) {
 async function addGameToUser(req, res) {
     try {
         let gameInDb = await Game.findOne({APIID: req.body.id})
-        let userGame = await 
         console.log(gameInDb, "line 24")
         if (!gameInDb) {
             const newGame = {
