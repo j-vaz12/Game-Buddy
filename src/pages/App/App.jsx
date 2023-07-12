@@ -9,15 +9,15 @@ import GameSearch from '../GameSearch/GameSearch';
 import CollectionPage from '../CollectionPage/CollectionPage';
 export default function App() {
   const [user, setUser] = useState(getUser());
-
+  const [userGames, setUserGames] = useState([])
   return (
     <main className="App">
       { user ?
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes>
-              <Route path="/Search" element={<GameSearch />} />
-              <Route path="/Collection" element={<CollectionPage />} />
+              <Route path="/Search" element={<GameSearch setUserGames={setUserGames}/>} />
+              <Route path="/Collection" element={<CollectionPage userGames={userGames}/>} />
             </Routes>
           </>
           :

@@ -20,36 +20,18 @@ async function searchAPI(req, res) {
 
 async function addGameToUser(req, res) {
     try {
-        let gameInDb = await Game.findOne({APIID: req.body.id})
-        console.log(gameInDb, "line 24")
-        if (!gameInDb) {
-            const newGame = {
-                APIID: req.body.id,
-                title: req.body.name,
-                img: req.body.background_image,
-                rating: req.body.rating
-            }
-            gameInDb = await Game.create(newGame)
-            
-            console.log(gameInDb , "this is line 33");
-            
-        }
-        const userGame = await UserGame.findOne({user: req.user._id});
-        if (userGame) {
-            const existingGame = userGame.games.includes(gameInDb._id);
-            if (existingGame) {
-                return res.status(400).json("Game already exists for user")
-            } 
-        userGame.games.push({ game: gameInDb._id }) 
-        await userGame.save()
-        } else {
-            const newUserGame = new UserGame({
-                user: req.user._id,
-                games: [{ game: gameInDb._id }]
-            })
-            await newUserGame.save()
-        }
-        res.status(200).json("Lets go!")
+        //check if game in db
+        let gameInDb = await Game.exists({APIID: req.body.id})
+        let currGame; 
+        //if no game => create game
+        if (!gameInDb)  currGame = await Game.create({ APIID: req.body.id, title: req.body.name, img: req.body.background_image, rating: req.body.rating })
+         else currGame = await Game.findOne({APIID: req.body.id})
+         // check if usergame in db or create
+        let userGameInDb = await UserGame.exists({user: req.user._id, game: gameInDb._id})
+        if (!userGameInDb) await UserGame.create({ user: req.user._id, game: gameInDb._id })
+        //return all user games 
+        const allUserGames = await UserGame.find({user: req.user._id}).populate('game').exec()
+        res.status(200).json(allUserGames)
     } catch (err) {
         res.status(400).json(err);
     }

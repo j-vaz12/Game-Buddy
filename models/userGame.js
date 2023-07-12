@@ -6,16 +6,24 @@ const userGameSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    games: [{
-        game: {
-            type: Schema.Types.ObjectId,
-            ref: 'Game'
-        },
-        completed: {
-            type: Boolean,
-            default: false
-        },
-    }]
+    game: {
+        type: Schema.Types.ObjectId,
+        ref: 'Game'
+    },
+    completed: {
+        type: Boolean,
+        default: false
+    },
+    
+    wishList: {
+        type: Boolean,
+        default: false
+    },
+    inProgress: {
+        type: Boolean,
+        default: false
+    },
+
 });
 
 module.exports = mongoose.model('UserGame', userGameSchema)
