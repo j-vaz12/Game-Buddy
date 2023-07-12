@@ -23,7 +23,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background-color: var(--navy-blue); */
   background-color: rgb(19, 81, 205);
-  padding: 2vmin;
+  /* padding: 2vmin;
+   */
   height: 100vh;
 }
 

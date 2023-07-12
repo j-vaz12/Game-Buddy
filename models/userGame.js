@@ -6,11 +6,16 @@ const userGameSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User"
     },
-    game: {
-        type: Schema.Types.ObjectId,
-        ref: "Game"
-    }
-
+    collection: [{
+        game: {
+            type: Schema.Types.ObjectId,
+            ref: 'Game',
+        }, 
+        completed: {
+            type: Boolean,
+            default: false
+        }
+    }],
 });
 
 

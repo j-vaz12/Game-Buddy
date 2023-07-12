@@ -1,5 +1,6 @@
 const Game = require('../../models/game');
-const fetch = require('node-fetch')
+const UserGame = require('../../models/userGame');
+const fetch = require('node-fetch');
 
 module.exports = {
     searchAPI,
@@ -20,6 +21,8 @@ async function searchAPI(req, res) {
 async function addGameToUser(req, res) {
     try {
         let gameInDb = await Game.findOne({APIID: req.body.id})
+        let userGame = await 
+        console.log(gameInDb, "line 24")
         if (!gameInDb) {
             const newGame = {
                 APIID: req.body.id,
@@ -28,7 +31,9 @@ async function addGameToUser(req, res) {
                 rating: req.body.rating
             }
             gameInDb = await Game.create(newGame)
-        } 
+            console.log(gameInDb , "this is line 33");
+            
+        }
         res.status(200).json("Lets go!")
     } catch (err) {
         res.status(400).json(err);
