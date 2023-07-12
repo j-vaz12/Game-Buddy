@@ -14,7 +14,7 @@ const userGameSchema = new Schema({
         completed: {
             type: Boolean,
             default: false
-        }
+        },
     }]
 });
 
