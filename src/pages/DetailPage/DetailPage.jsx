@@ -18,8 +18,10 @@ export default function InProgressPage( { userGames } ) {
     return(
         <div>
             <h1> { curgame.game.title } </h1>
-            <img src={curgame.game.img} alt="" />
-            
+            <img src={ curgame.game.img } alt="" />
+            <h1>{ curgame.game.rating }</h1>
+            <button>completed</button> <button>In progress</button>
+            <input type="checkbox" />
         </div>
     );
 }
