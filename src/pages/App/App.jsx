@@ -7,6 +7,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import WelcomePage from '../WelcomePage/WelcomePage';
 import GameSearch from '../GameSearch/GameSearch';
 import CollectionPage from '../CollectionPage/CollectionPage';
+import InProgress from '../InProgress/InProgress';
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [userGames, setUserGames] = useState([])
@@ -18,6 +19,7 @@ export default function App() {
             <Routes>
               <Route path="/Search" element={<GameSearch setUserGames={setUserGames}/>} />
               <Route path="/Collection" element={<CollectionPage userGames={userGames}/>} />
+              <Route path="/InProgress" element={<InProgress userGames={userGames}/>} />
             </Routes>
           </>
           :
