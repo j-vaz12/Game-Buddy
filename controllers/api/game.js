@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 module.exports = {
     searchAPI,
-    addGameToUser
+    addGameToUser,
 }
 
 async function searchAPI(req, res) {
@@ -36,3 +36,4 @@ async function addGameToUser(req, res) {
         res.status(400).json(err);
     }
 }
+

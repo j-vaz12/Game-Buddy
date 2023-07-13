@@ -10,7 +10,7 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to="/InProgress/:gameTitle">In Progress</Link>
+      <Link to="/InProgress">In Progress</Link>
       &nbsp; | &nbsp;
       <Link to="/completed">Completed</Link>
       &nbsp; | &nbsp;
