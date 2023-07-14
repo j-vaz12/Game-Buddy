@@ -17,8 +17,8 @@ export default function App() {
 
   useEffect( function (){
     async function getUserGames(){
+      if (!user) return
       const data = await userGamesAPI.getAllUserGames();
-      console.log(data)
       setUserGames(data)
     }
     getUserGames();
@@ -31,8 +31,8 @@ export default function App() {
             <NavBar user={user} setUser={setUser} />
             <Routes>
               <Route path="/Search" element={<GameSearch setUserGames={setUserGames}/>} />
-              <Route path="/Collection" element={<CollectionPage userGames={userGames}/>} />
-              <Route path="/usergame/:id" element={<DetailPage userGames={userGames}/>} />
+              <Route path="/Collection" element={<CollectionPage userGames={userGames} userGamesAPI={userGamesAPI} setUserGames={setUserGames}/>} />
+              <Route path="/usergame/:id" element={<DetailPage userGames={userGames} setUserGames={setUserGames}/>} />
             </Routes>
           </>
           :

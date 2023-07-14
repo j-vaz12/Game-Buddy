@@ -25,6 +25,7 @@ export default function GameSearch( {setUserGames} ) {
     const navigate = useNavigate()
     async function addGame(g) {
         const allUserGames = await gamesAPI.addGameToUser(g)
+        console.log(allUserGames)
         setUserGames(allUserGames)
         navigate('/Collection')
     }
