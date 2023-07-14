@@ -15,13 +15,25 @@ export default function InProgressPage( { userGames } ) {
 
     if (!curgame) return null;
 
+    function handleUpdate(property) {
+        const updateObj = {    
+            completed: false,
+            wishList: false,
+            inProgress: false,
+        }
+        updateObj[property] = true
+        
+    }
+
+
     return(
         <div>
             <h1> { curgame.game.title } </h1>
             <img src={ curgame.game.img } alt="" />
             <h1>{ curgame.game.rating }</h1>
-            <button>completed</button> <button>In progress</button>
-            <input type="checkbox" />
+            <button onClick={() => handleUpdate('completed')}>completed</button>
+            <button onClick={() => handleUpdate('wishList')}>In progress</button> 
+            <button onClick={() => handleUpdate('inProgress')}>Wish List</button>
         </div>
     );
 }

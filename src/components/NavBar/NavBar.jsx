@@ -10,15 +10,16 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to="/InProgress">In Progress</Link>
-      &nbsp; | &nbsp;
-      <Link to="/completed">Completed</Link>
-      &nbsp; | &nbsp;
-      <Link to="/Collection">Collection</Link>
+      {/* <Link to="/InProgress">In Progress</Link> */}
+      {/* &nbsp; | &nbsp; */}
+      {/* <span className="separator"> | </span> */}
+      {/* <Link to="/completed">Completed</Link> */}
+      {/* &nbsp; | &nbsp; */}
+      <Link to="/Collection" className='line'>Collection</Link>
       &nbsp; | &nbsp;
       <Link to="search"> Search </Link>
       <span>Welcome, {user.name}</span>
-      &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
+      &nbsp;&nbsp;<Link to="nav-link" onClick={handleLogOut}>Log Out</Link>
     </nav>
   );
 }
