@@ -1,5 +1,6 @@
 import { useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
+import * as userGamesAPI from '../../utilities/userGames-api'
 
 export default function InProgressPage( { userGames } ) {
     const { id } = useParams();
@@ -15,14 +16,14 @@ export default function InProgressPage( { userGames } ) {
 
     if (!curgame) return null;
 
-    function handleUpdate(property) {
+    async function handleUpdate(property) {
         const updateObj = {    
             completed: false,
             wishList: false,
             inProgress: false,
         }
         updateObj[property] = true
-        
+        const updatedData = await userGamesAPI.updatedUserGame();
     }
 
 

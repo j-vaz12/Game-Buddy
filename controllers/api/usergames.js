@@ -3,6 +3,7 @@ const UserGame = require('../../models/userGame');
 
 module.exports = {
     getAllUserGames,
+    updatedUserGame
 }
 
 
@@ -13,5 +14,13 @@ async function getAllUserGames(req, res) {
     } catch (err) {
         console.log(err)
         res.status(500).json(err);
+    } 
+}
+
+async function updatedUserGame(req, res) {
+    try {
+        const gameStatus = await UserGame;
+    } catch (err) {
+;
     } 
 }
