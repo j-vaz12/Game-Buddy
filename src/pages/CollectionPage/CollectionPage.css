@@ -1,0 +1,21 @@
+.Game-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    border: 0.2rem solid black;
+}
+
+.g-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid black;
+    width: 150px;
+    height: 150px;
+}
+.game-title {
+    font-weight: bold;
+    /* color:  */
+}

@@ -32,6 +32,7 @@ export default function App() {
             <Routes>
               <Route path="/Search" element={<GameSearch setUserGames={setUserGames}/>} />
               <Route path="/Collection" element={<CollectionPage userGames={userGames} userGamesAPI={userGamesAPI} setUserGames={setUserGames}/>} />
+              <Route path="/*" element={<CollectionPage userGames={userGames} userGamesAPI={userGamesAPI} setUserGames={setUserGames}/>} />
               <Route path="/usergame/:id" element={<DetailPage userGames={userGames} setUserGames={setUserGames}/>} />
             </Routes>
           </>

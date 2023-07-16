@@ -38,8 +38,9 @@ export default function GameSearch( {setUserGames} ) {
             </form>
             <div className="Search">
              {games.map(g => (
-                <div key={g.id} className="game-container" style={{ backgroundImage: `url(${g.background_image})`, backgroundPosition: 'center'  }}>
-                    <h3>{g.name}</h3>
+                <div key={g.id} className="game-container" >
+                    <img src=`${g.background_img}` alt="" />
+                    <h3 className="Game-name">{g.name}</h3>
                     <button onClick={() => addGame(g)}>Add Game</button>
                 </div>
              ))}
@@ -48,3 +49,4 @@ export default function GameSearch( {setUserGames} ) {
     );
 }
 
+// style={{ backgroundImage: `url(${g.background_image})`, backgroundPosition: 'center'  }}
