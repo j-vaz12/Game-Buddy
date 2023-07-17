@@ -40,7 +40,7 @@ export default function GameSearch( {setUserGames} ) {
             <div className="Search">
              {games.map(g => (
                 <div key={g.id} className="game-container" >
-                    <h3 className="Game-name">{g.name}</h3>
+                    <h3 className="game-name">{g.name}</h3>
                     <img className="game-img" src={g.background_image} alt="" />
                     <button onClick={() => addGame(g)}>Add Game</button>
                 </div>

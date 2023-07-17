@@ -153,3 +153,26 @@ button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
 }
+
+.game-container {
+  border: 5px solid black;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1%;
+  background-color: white;
+}
+
+.game-name {
+  font-weight: 800;
+  font-size: large;
+  padding: 5px;
+}
+
+.game-img {
+  width: 350px;
+  height: 300px;
+  padding: 10px;
+}

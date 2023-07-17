@@ -19,18 +19,18 @@ export default function CollectionPage( {userGames, userGamesAPI, setUserGames} 
     return(
         <div >
             <h1>Collection page</h1>
-            <button onClick={() => setFilterWord("inProgress")}>In Progress</button>
-            <button onClick={() => setFilterWord("completed")}>Completed</button> 
-            <button onClick={() => setFilterWord("wishList")}>Wish List</button> 
-            <button onClick={() => setFilterWord("all")}>All Games</button> 
+            <button className="collection-btn" onClick={() => setFilterWord("inProgress")}>In Progress</button>
+            <button className="collection-btn" onClick={() => setFilterWord("completed")}>Completed</button> 
+            <button className="collection-btn" onClick={() => setFilterWord("wishList")}>Wish List</button> 
+            <button className="collection-btn" onClick={() => setFilterWord("all")}>All Games</button> 
 
             <div className="Game-list">
                 {filterItems.map(g => (
-                        <div className="g-container" key={g._id}>
-                            <span className="game-title">{g.game.title}</span>
+                        <div className="game-container" key={g._id}>
+                            <span className="game-name">{g.game.title}</span>
                             <img className="game-img" src={g.game.img} alt="" />
-                            <Link to={`/usergame/${g._id}`}> Detail page </Link>
-                            <button onClick={() => handlDelete(g._id)}>Delete</button>
+                            <Link className="detail" to={`/usergame/${g._id}`}> Detail page </Link>
+                            <button className="fa fa-trash-o" onClick={() => handlDelete(g._id)} ></button>
                         </div>
                 ))}
             </div>

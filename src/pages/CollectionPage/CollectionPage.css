@@ -2,24 +2,38 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-}
-
-.g-container {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border: 0.2rem solid black;
-    width: 400px;
-    height: 400px;
-    margin: 10px;
-}
-.game-title {
-    font-weight: bold;
-    /* color:  */
 }
 
-.game-img {
-    height: 200px;
-    width: 200px;
+.detail {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
 }
+
+.detail:hover {
+    color: blue;
+}
+
+.collection-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #007bff; /* Replace with your desired background color */
+    color: #fff; /* Replace with your desired text color */
+    font-size: 16px;
+    text-align: center;
+}
+
+button[class="fa fa-trash-o"] {
+    font-size: 25px;
+    padding: 5px 10px;
+    margin: 20px;
+}
+
+button[class="fa fa-trash-o"]:hover {
+    font-size: 25px;
+    color: white;
+    background-color: red;
+    padding: 5px 10px;
+}
+
