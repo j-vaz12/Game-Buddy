@@ -41,8 +41,8 @@ async function updatedUserGame(req, res) {
             // options object {new: true} returns updated doc
             {new: true}
           );
-        const allUserGames = await UserGame.find({user: req.user._id}).populate('game').exec()
-        res.status(200).json(allUserGames);
+          const allUserGames = await UserGame.find({user: req.user._id}).populate('game').exec()
+          res.status(200).json(allUserGames);
     } catch (err) {
         console.log(err)
         res.status(500).json(err);

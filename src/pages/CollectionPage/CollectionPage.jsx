@@ -26,8 +26,9 @@ export default function CollectionPage( {userGames, userGamesAPI, setUserGames} 
 
             <div className="Game-list">
                 {filterItems.map(g => (
-                        <div className="g-container" key={g._id}  style={{ backgroundImage: `url(${g.game.img})`, backgroundPosition: 'center'  }}>
+                        <div className="g-container" key={g._id}>
                             <span className="game-title">{g.game.title}</span>
+                            <img className="game-img" src={g.game.img} alt="" />
                             <Link to={`/usergame/${g._id}`}> Detail page </Link>
                             <button onClick={() => handlDelete(g._id)}>Delete</button>
                         </div>
@@ -36,3 +37,5 @@ export default function CollectionPage( {userGames, userGamesAPI, setUserGames} 
         </div>
     );
 } 
+
+// style={{ backgroundImage: `url(${g.game.img})`, backgroundPosition: 'center'  }}
