@@ -37,3 +37,9 @@ button[class="fa fa-trash-o"]:hover {
     padding: 5px 10px;
 }
 
+.active-btn {
+    /* Add styles for the active button, for example, changing the background color */
+    background-color: red; /* Change this to the desired color */
+    color: #fff; /* Change this to the desired text color */
+  }
+  

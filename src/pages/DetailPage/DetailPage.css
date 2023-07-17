@@ -14,7 +14,6 @@
     align-items: center;  
 } */
 
-/* Updated styles for .detail-container to take up the entire page */
 .detail-container {
     display: flex;
     justify-content: center;
@@ -39,7 +38,7 @@
   
   .detail-img {
     max-width: 100%;
-    height: auto;
+    max-height: 500px;
     border: 2px solid #ddd;
     border-radius: 10px;
     margin: 40px 0;

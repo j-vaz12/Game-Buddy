@@ -17,12 +17,32 @@ export default function CollectionPage( {userGames, userGamesAPI, setUserGames} 
     }, [filterWord, userGames])
 
     return(
-        <div >
+        <div>
             <h1>Collection page</h1>
-            <button className="collection-btn" onClick={() => setFilterWord("inProgress")}>In Progress</button>
-            <button className="collection-btn" onClick={() => setFilterWord("completed")}>Completed</button> 
-            <button className="collection-btn" onClick={() => setFilterWord("wishList")}>Wish List</button> 
-            <button className="collection-btn" onClick={() => setFilterWord("all")}>All Games</button> 
+            <button
+                className={`collection-btn ${filterWord === "inProgress" ? "active-btn" : ""}`}
+                onClick={() => setFilterWord("inProgress")}
+             >
+                In Progress
+            </button>
+            <button
+                className={`collection-btn ${filterWord === "completed" ? "active-btn" : ""}`}
+                onClick={() => setFilterWord("completed")}
+            >
+                Completed
+            </button>
+            <button
+                className={`collection-btn ${filterWord === "wishList" ? "active-btn" : ""}`}
+                onClick={() => setFilterWord("wishList")}
+            >
+                Wish List
+            </button>
+            <button
+                className={`collection-btn ${filterWord === "all" ? "active-btn" : ""}`}
+                onClick={() => setFilterWord("all")}
+            >
+                All Games
+            </button>
 
             <div className="Game-list">
                 {filterItems.map(g => (
