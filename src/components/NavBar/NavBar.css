@@ -1,4 +1,4 @@
-nav {
+/* nav {
     background-color: #333;
     width: 100%;
     color: white;
@@ -35,4 +35,96 @@ nav {
   
   .nav-link:focus {
     outline: none;
+  } */
+/* 
+  nav {
+    background-color: #333;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
   }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  a:hover {
+    background-color: rgba(231, 30, 63, 0.8);
+  }
+  
+  .welcome-message {
+    margin-left: auto;
+    font-weight: bold;
+  }
+  
+  .log-out-link {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .log-out-link:hover {
+    background-color: #45a049;
+  }
+  
+  .log-out-link:active {
+    background-color: #3e8e41;
+  } */
+
+  nav {
+    background-color: #333;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  a:hover {
+    background-color: #007bff;
+  }
+  
+  .welcome-logout {
+    display: flex;
+    align-items: center;
+  }
+  
+  .welcome-message {
+    margin-right: 20px;
+  }
+  
+  .log-out-link {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .log-out-link:hover {
+    background-color: #45a049;
+  }
+  
+  .log-out-link:active {
+    background-color: #3e8e41;
+  }
+  

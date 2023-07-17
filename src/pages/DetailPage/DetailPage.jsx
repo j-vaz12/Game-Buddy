@@ -2,6 +2,7 @@ import { useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import * as userGamesAPI from '../../utilities/userGames-api'
+import './DetailPage.css'
 
 export default function InProgressPage( { userGames, setUserGames } ) {
     const { id } = useParams();
@@ -35,13 +36,15 @@ export default function InProgressPage( { userGames, setUserGames } ) {
 
 
     return(
-        <div>
-            <h1> { curgame.game.title } </h1>
-            <img src={ curgame.game.img } alt="" />
-            <h1>{ curgame.game.rating }</h1>
-            <button onClick={() => handleUpdate('inProgress')}>In progress</button> 
-            <button onClick={() => handleUpdate('completed')}>completed</button>
-            <button onClick={() => handleUpdate('wishList')}>Wish List</button>
+        <div className="detail-container">
+            <div className="content">
+                <h1> { curgame.game.title } </h1>
+                <img className="detail-img" src={ curgame.game.img } alt="" />
+                <h1 className="detail-rating" >Rating: { curgame.game.rating }</h1>
+                <button onClick={() => handleUpdate('inProgress')}>In progress</button> 
+                <button onClick={() => handleUpdate('completed')}>completed</button>
+                <button onClick={() => handleUpdate('wishList')}>Wish List</button>
+            </div>
         </div>
     );
 }
