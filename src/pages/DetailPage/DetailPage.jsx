@@ -1,10 +1,12 @@
 import { useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as userGamesAPI from '../../utilities/userGames-api'
 
 export default function InProgressPage( { userGames, setUserGames } ) {
     const { id } = useParams();
     const [curgame, setcurrGame] = useState(null)
+    const navigate = useNavigate()
 
     useEffect( function (){
         async function getCurrGame(){
@@ -26,8 +28,9 @@ export default function InProgressPage( { userGames, setUserGames } ) {
         const allUserGames = await userGamesAPI.updatedUserGame(updateObj, id);
         setUserGames(allUserGames)
         const gameDetail = userGames.find(g => g._id === id);
-        setcurrGame(gameDetail);
-        console.log(gameDetail)
+        setcurrGame(gameDetail); 
+        navigate('/Collection')
+        console.log(gameDetail);
     }
 
 
@@ -36,8 +39,8 @@ export default function InProgressPage( { userGames, setUserGames } ) {
             <h1> { curgame.game.title } </h1>
             <img src={ curgame.game.img } alt="" />
             <h1>{ curgame.game.rating }</h1>
-            <button onClick={() => handleUpdate('completed')}>completed</button>
             <button onClick={() => handleUpdate('inProgress')}>In progress</button> 
+            <button onClick={() => handleUpdate('completed')}>completed</button>
             <button onClick={() => handleUpdate('wishList')}>Wish List</button>
         </div>
     );

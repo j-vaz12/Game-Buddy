@@ -11,6 +11,7 @@ export default function GameSearch( {setUserGames} ) {
     //         const data = await gamesAPI.getGame();
     //     }
     // });
+
     function handelChange(evt) {
         const searchData = evt.target.value;
         setSearch(searchData)

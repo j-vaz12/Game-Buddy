@@ -1,7 +1,7 @@
 .Game-list {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .g-container {
@@ -12,6 +12,7 @@
     border: 0.2rem solid black;
     width: 400px;
     height: 400px;
+    margin: 10px;
 }
 .game-title {
     font-weight: bold;
@@ -19,5 +20,6 @@
 }
 
 .game-img {
-    
+    height: 200px;
+    width: 200px;
 }
