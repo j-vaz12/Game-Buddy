@@ -6,11 +6,6 @@ import * as gamesAPI from '../../utilities/game-api'
 export default function GameSearch( {setUserGames} ) {
     const [search, setSearch] = useState('')
     const [games, setGames] = useState([])
-    // useEffect( function (){
-    //     async function getGame() {
-    //         const data = await gamesAPI.getGame();
-    //     }
-    // });
 
     function handelChange(evt) {
         const searchData = evt.target.value;
@@ -32,11 +27,11 @@ export default function GameSearch( {setUserGames} ) {
     }
     return (
         <div>
-            <form onSubmit={handleSearch}>
-                <label> Search </label>
-                <input type="text" value={search} onChange={handelChange}/>
-                <button>Find</button>
-            </form>
+                <form className="search-form" onSubmit={handleSearch}>
+                    <label> Search </label>
+                    <input className="search-input" type="text" value={search} onChange={handelChange}/>
+                    <button className="search-btn" >Find</button>
+                </form>
             <div className="Search">
              {games.map(g => (
                 <div key={g.id} className="game-container" >
@@ -49,4 +44,3 @@ export default function GameSearch( {setUserGames} ) {
         </div>
     );
 }
-// style={{ backgroundImage: `url(${g.background_image})`, backgroundPosition: 'center'  }}

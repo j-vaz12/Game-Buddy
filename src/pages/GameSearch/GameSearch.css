@@ -5,28 +5,31 @@
     align-items: center;
     justify-content: center;
     border: 0.2rem solid black;
+    
 }
 
 
-form {
+.search-form {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  label {
+    justify-content: center;
+    text-align: center; 
+    padding-top: 100px;
+}
+
+label {
     font-size: 18px;
     margin-right: 10px;
-  }
-  
-  input[type="text"] {
+}
+
+.search-input[type="text"] {
     padding: 8px 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  button {
+}
+
+.search-btn {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
@@ -34,5 +37,5 @@ form {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
+}
+
