@@ -20,17 +20,17 @@ Game Buddy is a cutting-edge web application designed for passionate gamers who 
 <img src="https://i.imgur.com/wh1SLNW.png">
 
 ### Home page:
-<img src="https://i.imgur.com/DS3xU4q.png">
+<img src="https://i.imgur.com/SOxlkzf.png">
 
 ### Search example:
-<img src="https://i.imgur.com/z964xrg.png">
+<img src="https://i.imgur.com/rRiqwW1.png">
 
-### Users Vault:
-<img src="https://i.imgur.com/k2s65pZ.png">
+### Detail Page:
+<img src="https://i.imgur.com/PNByR7H.png">
 
 ##  💻 Technologies Used 
   ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
-    ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)
+  ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)
   ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
   ![CSS3](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=css3)
   ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
@@ -49,20 +49,16 @@ Game Buddy is a cutting-edge web application designed for passionate gamers who 
 
  [Application Link](https://game-buddyy-a9a4b6f3bc4b.herokuapp.com/Collection)
  
- [Trello Link](https://trello.com/b/gX5wkWNy/project-2)
+ [Trello Link](https://trello.com/b/HopXmfyA/project-4)
 <details open>
-<summary> Quick Guide </summary>
+<summary> Quick summary </summary>
 
-1. Search for any Pokémon either by name or, if you want to showcase your Pokémon knowledge, you can enter the Pokédex number.
-
-2. Once you have searched for your Pokémon, it's as simple as clicking "Add to Vault" to acquire it in your personal vault.
-
-3. You can remove Pokémon from your vault just as easily as you can add them. Don't forget to check out the Kanto region Pokémon page for more fun!
-
+1. Game Buddy is like your best buddy for gaming! It's a super cool website that helps you keep all your gaming stuff neat and tidy. You can make your own collection of games, keep track of how far you've come in each game, and even get hyped about new ones!
+2. You know how sometimes you forget which games you've played or where you left off? Well, Game Buddy's got your back! It remembers all that stuff for you, so you can just focus on having a blast playing.
+3. You can make a wishlist and get updates on what's popping up soon. So, no more FOMO (Fear of Missing Out) on the latest and greatest games!
 </details>
 
 ## Next steps 
-- Provide details on any Pokémon, allowing users to add comments on their favorite Pokémon.
-- Enable users to express their appreciation by liking Pokémon, with the most liked Pokémon showcased on a dedicated top Pokémon page.
+- Add Commenting Feature: Allow users to leave comments and reviews on games in their collections. This will give them a chance to share their thoughts, recommendations, and tips with others in the community.- Enable users to express their appreciation by liking Pokémon, with the most liked Pokémon showcased on a dedicated top Pokémon page.
 - Empower users to personalize their Pokémon cards, giving them the freedom to customize the appearance to their liking.
 - Enhance the overall user experience with additional animations and music, adding an extra layer of immersion and enjoyment.
