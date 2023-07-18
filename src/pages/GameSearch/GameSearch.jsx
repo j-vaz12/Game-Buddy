@@ -13,10 +13,19 @@ export default function GameSearch( {setUserGames} ) {
     }
 
     async function handleSearch(evt) {
+        console.log('handelSearch')
         evt.preventDefault();
         const data = await gamesAPI.searchAPI(search);
         setGames(data.results);
     }
+    useEffect(function() {
+        console.log('useEffect')
+        async function showGames() {
+            const data = await gamesAPI.searchAPI(search);
+            setGames(data.results);
+        }
+        showGames()
+    },[]);
 
     const navigate = useNavigate()
     async function addGame(g) {
@@ -28,7 +37,7 @@ export default function GameSearch( {setUserGames} ) {
     return (
         <div>
                 <form className="search-form" onSubmit={handleSearch}>
-                    <label> Search </label>
+                    <label className="label-search"> Search </label>
                     <input className="search-input" type="text" value={search} onChange={handelChange}/>
                     <button className="search-btn" >Find</button>
                 </form>

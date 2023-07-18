@@ -22,7 +22,7 @@ async function getAllUserGames(req, res) {
 async function removeGame(req, res) {
     try {
         console.log("remove game", req.params.id)
-        await UserGame.findByIdAndDelete(req.params.id);
+        await UserGame.findByIdAndDelete({_id: req.params.id, user: req.user._id});
         const allUserGames = await UserGame.find({user: req.user._id}).populate('game').exec()
         res.status(200).json(allUserGames);
     } catch (err) {

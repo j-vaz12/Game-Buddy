@@ -2,7 +2,7 @@
 
   # Game-Buddy
 
-  ### [Click here to launch!](https://pokemon-vault.herokuapp.com/)
+  ### [Click here to launch!](https://game-buddyy-a9a4b6f3bc4b.herokuapp.com/Collection)
 
   ##### Jason Vasquez
 
@@ -10,8 +10,8 @@
 
   ## 📝Description 
 
+Game Buddy is a cutting-edge web application designed for passionate gamers who love to keep their gaming experiences organized and personalized. With an extensive API that covers a vast library of games, Game Buddy is the perfect platform for gamers to curate their collections, track their progress, and keep their wishlist up-to-date with the latest and greatest titles.
 
-Welcome to the Pokémon Vault web application, designed to cater to the needs of Pokémon enthusiasts and beyond. With a user-friendly interface, you can effortlessly search for and add your favorite Pokémon to your personal vault. Whether you're a passionate Pokémon fan or simply curious, the platform invites you to explore and enjoy.
 
   </div>
 
@@ -30,6 +30,7 @@ Welcome to the Pokémon Vault web application, designed to cater to the needs of
 
 ##  💻 Technologies Used 
   ![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)
+    ![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)
   ![HTML5](https://img.shields.io/badge/-HTML5-05122A?style=flat&logo=html5)
   ![CSS3](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=css3)
   ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)
@@ -46,7 +47,7 @@ Welcome to the Pokémon Vault web application, designed to cater to the needs of
 
 ## 🔥 Getting Started 
 
- [Application Link](https://pokemon-vault.herokuapp.com/)
+ [Application Link](https://game-buddyy-a9a4b6f3bc4b.herokuapp.com/Collection)
  
  [Trello Link](https://trello.com/b/gX5wkWNy/project-2)
 <details open>
