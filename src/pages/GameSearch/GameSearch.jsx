@@ -36,11 +36,11 @@ export default function GameSearch( {setUserGames} ) {
     }
     return (
         <div>
-                <form className="search-form" onSubmit={handleSearch}>
-                    <label className="label-search"> Search </label>
-                    <input className="search-input" type="text" value={search} onChange={handelChange}/>
-                    <button className="search-btn" >Find</button>
-                </form>
+            <form className="search-form" onSubmit={handleSearch}>
+                <label className="label-search"> Search </label>
+                <input className="search-input" type="text" value={search} onChange={handelChange}/>
+                <button className="search-btn" >Find</button>
+            </form>
             <div className="Search">
              {games.map(g => (
                 <div key={g.id} className="game-container" >

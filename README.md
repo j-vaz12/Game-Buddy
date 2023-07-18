@@ -16,8 +16,6 @@ Game Buddy is a cutting-edge web application designed for passionate gamers who 
   </div>
 
 ## 📸 Screenshots 
-### Log in page:
-<img src="https://i.imgur.com/wh1SLNW.png">
 
 ### Home page:
 <img src="https://i.imgur.com/SOxlkzf.png">
@@ -55,10 +53,9 @@ Game Buddy is a cutting-edge web application designed for passionate gamers who 
 
 1. Game Buddy is like your best buddy for gaming! It's a super cool website that helps you keep all your gaming stuff neat and tidy. You can make your own collection of games, keep track of how far you've come in each game, and even get hyped about new ones!
 2. You know how sometimes you forget which games you've played or where you left off? Well, Game Buddy's got your back! It remembers all that stuff for you, so you can just focus on having a blast playing.
-3. You can make a wishlist and get updates on what's popping up soon. So, no more FOMO (Fear of Missing Out) on the latest and greatest games!
-</details>
+3. You can make a wishlist and add all the games your little heart wants
 
 ## Next steps 
-- Add Commenting Feature: Allow users to leave comments and reviews on games in their collections. This will give them a chance to share their thoughts, recommendations, and tips with others in the community.- Enable users to express their appreciation by liking Pokémon, with the most liked Pokémon showcased on a dedicated top Pokémon page.
-- Empower users to personalize their Pokémon cards, giving them the freedom to customize the appearance to their liking.
+- Add Commenting Feature: Allow users to leave comments and reviews on games in their collections. This will give them a chance to share their thoughts, recommendations, and tips with others in the community.
+- Like Games: Implement a "Like" button for games in the collections. When users find a game they adore, they can express their love by giving it a thumbs-up, making it easier for others to discover popular games.
 - Enhance the overall user experience with additional animations and music, adding an extra layer of immersion and enjoyment.

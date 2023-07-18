@@ -1,0 +1,33 @@
+.welcome-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none; 
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-link:hover {
+  background-color: #0056b3; 
+}
+
+.welcome-link:active {
+  background-color: #003974; 
+}
+
+p {
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
