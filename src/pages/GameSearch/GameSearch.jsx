@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import './GameSearch.css'
 import { useNavigate } from "react-router-dom";
-import * as gamesAPI from '../../utilities/game-api'
+import * as gamesAPI from '../../utilities/game-api';
 
 export default function GameSearch( {setUserGames} ) {
-    const [search, setSearch] = useState('')
-    const [games, setGames] = useState([])
+    const [search, setSearch] = useState('');
+    const [games, setGames] = useState([]);
 
     function handelChange(evt) {
         const searchData = evt.target.value;
@@ -13,13 +13,11 @@ export default function GameSearch( {setUserGames} ) {
     }
 
     async function handleSearch(evt) {
-        console.log('handelSearch')
         evt.preventDefault();
         const data = await gamesAPI.searchAPI(search);
         setGames(data.results);
     }
     useEffect(function() {
-        console.log('useEffect')
         async function showGames() {
             const data = await gamesAPI.searchAPI(search);
             setGames(data.results);
@@ -27,12 +25,11 @@ export default function GameSearch( {setUserGames} ) {
         showGames()
     },[]);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     async function addGame(g) {
         const allUserGames = await gamesAPI.addGameToUser(g)
-        console.log(allUserGames)
-        setUserGames(allUserGames)
-        navigate('/Collection')
+        setUserGames(allUserGames);
+        navigate('/Collection');
     }
     return (
         <div>
