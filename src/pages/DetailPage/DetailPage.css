@@ -1,18 +1,4 @@
-/* .detail-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
-.detail-img{
-    height: 700px;
-    width: 950px;
-}
-.content {
-    flex-direction: column;
-    align-items: center;  
-} */
 .detail-container {
     position: relative;
     width: 100%;
